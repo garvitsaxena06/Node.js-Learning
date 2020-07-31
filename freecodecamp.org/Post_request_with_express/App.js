@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'static', 'index.html'))
 })
 
-app.post('/', (req, res) => {
+app.post('/post', (req, res) => {
     console.log(req.body)
     res.send("Successfully send the data!")
 })
