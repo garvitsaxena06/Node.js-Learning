@@ -12,7 +12,7 @@ app.get('/example', (req, res) => {
 
 app.get('/example/:name/:age', (req, res) => {
     console.log(req.params)         //This is what the user passes to the endpoints   localhost:3000/example/garvit/19
-    console.log(req.query)          //This is after the question mark   localhost:3000/example/garvit/19?tutorial=freecodecamp
+    console.log(req.query)          //This is after the question mark   localhost:3000/example/garvit/19?tutorial=freecodecamp&...
     res.send(req.params.name + " : " + req.params.age)
 })
 
