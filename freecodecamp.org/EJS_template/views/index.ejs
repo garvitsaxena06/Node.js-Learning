@@ -10,7 +10,9 @@
     <center>
         <div>
             <h1>You've searched for : <%= data.userQuery %> </h1>
-            <h3>You're logged in as </h3>
+            <% if(data.loggedIn){ %>
+                <h3>You're logged in as: <%= data.user %> </h3>
+            <% } %>
             <ul>
                 <% data.searchResults.forEach(result => { %>
                     <li><%= result %></li>
