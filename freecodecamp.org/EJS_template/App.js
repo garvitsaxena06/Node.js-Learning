@@ -8,9 +8,12 @@ app.use('/public', express.static(path.join(__dirname, '/views')))
 app.set('view engine', 'ejs')
 
 app.get('/:userQuery', (req, res) => {
-    res.render('index', {data : {
-        userQuery : req.params.userQuery,
-    }})
+    res.render('index', {
+        data : {
+            userQuery : req.params.userQuery,
+            searchResults : ['item1', 'item2', 'item3'],
+        }
+    })
 })
 
 app.listen(PORT, err => {
