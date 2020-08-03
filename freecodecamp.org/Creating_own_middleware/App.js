@@ -3,12 +3,13 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 
-app.use('/hello', (req, res, next) => {
-    console.log(req.url, req.method)
+app.use((req, res, next) => {
+    req.banana = 'banana'
     next()
 })
 
 app.get('/', (req, res) => {
+    console.log(req.banana)
     res.send("Hello World!")
 })
 
